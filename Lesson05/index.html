@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <mete charset="UTF-8">
+    <meta http-equiv="refresh" content="5;URL=https://www.google.com/?hl=ja">
+    <meta name="description" content="Schoo研修のテストです"/>
+    <link rel="stylesheet" href="css/style.css">
+    <title>これはHTML文書です。</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Position
+            <th>Team
+            <th>Location
+        <tr>
+            <td><a href="./manager.html">Manager</a>
+            <td>Remotees
+            <td>Remote
+        <tr>
+            <td><a href="./director.html">Director</a>
+            <td>Remotees
+            <td>Remote
+        <tr>
+            <td><a href="./astronaut.html">Astronaut</a>
+            <td>Architecture
+            <td>Remote
+    </table>
+    <script>
+        document.querySelector("table").onclick = ({ target }) => {
+            if (target.parentElement.localName === "tr") {
+                const link = target.parentElement.querySelector("a");
+                if (link) {
+                    link.click();
+                }
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
